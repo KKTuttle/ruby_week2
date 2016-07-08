@@ -24,19 +24,13 @@ get('/word/:id') do
 end
 
 
-
-
-
-
-
-# post ('/word/:id') do
-#   word = Word.find(params['id'].to_i)
-#   definition = Definition.new
-#   word.add_definition(params.fetch('definition'))
-#   word.save()
-#   @word = word
-#   erb(:word_definition)
-# end
+post('/word/:id') do
+  word = Word.find(params['id'].to_i)
+  word.add_definition(params.fetch('defin'))
+  word.save()
+  @word = word
+  erb(:word_definition)
+end
 
 
 

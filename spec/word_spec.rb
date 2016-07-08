@@ -42,7 +42,7 @@ describe(Word) do
   describe('#definition') do
     it "returns an epmty array of definitions for word" do
       test_word = Word.new({:word => 'Stock'})
-      expect(test_word.definition()).to(eq([]))
+      expect(test_word.definitions()).to(eq([]))
     end
   end
 
@@ -51,7 +51,7 @@ describe(Word) do
       test_word = Word.new({:word => 'Stock'})
       test_definition = Definition.new({:definition => "A stock is a type of security that signifies ownership in a corporation and represents a claim on part of the corporation's assets and earnings."})
       test_word.add_definition(test_definition)
-      expect(test_word.definition).to(eq([test_definition]))
+      expect(test_word.definitions).to(eq([test_definition]))
     end
   end
 

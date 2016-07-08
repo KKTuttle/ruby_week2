@@ -45,7 +45,7 @@ describe(Word) do
       expect(test_word.definition()).to(eq([]))
     end
   end
-  
+
   describe("#add_definition") do
     it "adds a definition to the word" do
       test_word = Word.new({:word => 'Stock'})
@@ -55,4 +55,13 @@ describe(Word) do
     end
   end
 
+  describe(".find") do
+    it "returns a word by its id" do
+      test_word = Word.new({:word => 'Stock'})
+      test_word.save()
+      test_word2 = Word.new({:word => 'Option'})
+      test_word2.save()
+      expect(Word.find(test_word.id())).to(eq(test_word))
+    end
+  end
 end

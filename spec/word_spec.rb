@@ -33,18 +33,18 @@ describe(Word) do
 
   describe(".clear") do
     it "clears out all the saved words" do
-      Word.new({:word => 'Stock'}).save()
+      test_word = Word.new({:word => 'Stock'}).save()
       Word.clear()
       expect(Word.all()).to(eq([]))
     end
   end
-#   describe(".clear") do
-#   it("empties out all of the saved words") do
-#     Task.new("wash the lion").save()
-#     Task.clear()
-#     expect(Task.all()).to(eq([]))
-#   end
-# end
 
-  # describe()
+  # describe("") do
+  #   it "" do
+  #     test_word = Word.new({:word => 'Stock'})
+  #
+  #     expect().to(eq())
+  #   end
+  # end
+
 end

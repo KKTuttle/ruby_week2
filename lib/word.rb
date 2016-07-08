@@ -21,7 +21,7 @@ class Word
     @@words = []
   end
 
-  # define_method(:definition) do
-  #   @definition.push(definition)
-  # end
+  define_method(:add_definition) do |definition|
+    @definition.push(definition)
+  end
 end

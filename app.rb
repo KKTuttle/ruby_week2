@@ -29,6 +29,7 @@ post('/word/:id') do
   word.add_definition(params.fetch('defin'))
   word.save()
   @word = word
+  
   erb(:word_definition)
 end
 

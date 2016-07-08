@@ -2,7 +2,8 @@
 
 <form action="/word/<%= @word.id %>" method="post">
   <label for="defin">Add an definition</label>
-  <input id="defin" name="defin" type="text">
+  <!-- <input id="defin" name="defin" type="text"> -->
+  <textarea name="defin" class="form-control"></textarea>
   <button type="submit">Add definition</button>
 </form>
 
@@ -10,12 +11,12 @@
 <% if @definitions != [] %>
   <h3>List of definitions added to <%= @word.word() %> <h3>
   <ul>
-    <% @word.definitions.each() do | definition | %>
-      <li><%= definition.defin %></li>
+    <% @word.definitions.each do | definition | %>
+      <li><%= @word.definitions %></li>
     <% end %>
   </ul>
 <% end %>
-
+<a href="/">Return to Main Page</a>
 <!--definition.definition
     word.definition
     definition.add_definition

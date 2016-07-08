@@ -1,8 +1,8 @@
 require('rspec')
 require('pry')
+require('launchy')
 require('word')
 require('definition')
-require('launchy')
 
 describe(Word) do
   before() do

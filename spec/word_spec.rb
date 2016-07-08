@@ -15,7 +15,6 @@ describe(Word) do
 
   describe('.all') do
     it "is empty at the beginning" do
-      # test_word = Word.new({:word => 'Stock'})
       expect(Word.all()).to(eq([]))
     end
   end
@@ -28,13 +27,13 @@ describe(Word) do
 #   end
 # end
 
-  # describe('#save') do
-  #   it "return an inputted word" do
-  #     test_word=Word.new({:word => 'Stock'})
-  #     test_word.save()
-  #     expect(test_word.id).to(eq(1))
-  #     test_word
-  #   end
-# end
+  describe('#save') do
+    it "saves the inputted word" do
+      test_word=Word.new({:word => 'Stock'})
+      test_word.save()
+      expect(Word.all()).to(eq([test_word]))
+      test_word
+    end
+  end
   # describe()
 end

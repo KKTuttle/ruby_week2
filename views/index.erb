@@ -7,3 +7,12 @@
   <input id="word" name="word" type="text">
   <button type="submit">Add Word to Your Dictionary</button>
 </form>
+
+<%if @words != [] %>
+  <h3>List of all words in dictionary</h3>
+  <ul>
+    <% @words.each do |word| %>
+    <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
+    <% end %>
+  </ul>
+<% end %>
